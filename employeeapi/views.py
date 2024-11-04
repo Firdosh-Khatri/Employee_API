@@ -20,7 +20,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
         if role:
             employees = employees.filter(role=role)
 
-        # Implement pagination (simple version)
+        # Implement pagination in the app
         start = (int(page) - 1) * 10
         end = start + 10
         paginated_employees = employees[start:end]
